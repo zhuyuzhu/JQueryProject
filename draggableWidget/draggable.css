@@ -1,0 +1,12 @@
+.wrapper{
+    width: 1000px;
+    height: 800px;
+    border: 1px solid black;
+}
+#draggable {
+    width: 300px;
+    border: 1px solid black;
+}
+.ui-draggable {
+    background-color: greenyellow;
+}
