@@ -79,7 +79,9 @@ original和helper都添加了ui-draggable
 值：original：是源元素，拖拽时，将拖拽源标签作为helper，随着光标移动
 值：clone：克隆源标签，克隆的标签随着光标移动
 值：还可以是一个function：返回值是一个标签元素dom等的 DOMElement
-helper: function(){return '<div style="width:200px;height:50px;background-color:red;"></div>';}
+helper: function(){return 
+        div style="width:200px;height:50px;background-color:red;">/div>;
+        }
 
 (23)connectToSortable: false
 允许 draggable 放置在指定的 sortable 上。
@@ -120,16 +122,16 @@ $( "#draggable" ).draggable( "option", "z-index", 1000 );//设置指定的值，
 $( "#draggable" ).draggable( "option", { "z-index": 999, "opacity: 0.5" } );//为 draggable 设置一个或多个选项
 
 (32)事件
-drag: function( event, ui ) {//在拖拽期间当鼠标移动时触发
+drag: function( event, ui ) {//在拖拽期间当鼠标移动时触发 <br>
+    // console.log(ui);
+},<br>
+start: function( event, ui ) {//当拖拽开始时触发<br>
     // console.log(ui);
 },
-start: function( event, ui ) {//当拖拽开始时触发
-    // console.log(ui);
-},
-stop: function( event, ui ) {//当拖拽停止时触发
+stop: function( event, ui ) {//当拖拽停止时触发<br>
     // console.log(ui);
 }
-//ui:{
+//ui:{<br>
 //     helper: init [div#draggable.ui-widget-content.ui-draggable, context: div#draggable.ui-widget-content.ui-draggable]
 //     offset: {top: 47, left: 81}
 //     originalPosition: {top: 25, left: 37}
