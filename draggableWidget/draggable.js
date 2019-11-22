@@ -2,11 +2,11 @@ $(function() {
     // helper:跟着鼠标移动的标签
     $( "#draggable" ).draggable();//启用draggable的默认功能
     $( "#draggable" ).draggable({
-        addClasses: false,//添加ui-draggable的css类，可以通过该类给标签设置样式
-        appendTo: "parent",//?
+        addClasses: true,
+        appendTo: "parent",
 
         axis: false,//约束在水平轴 (x) 或垂直轴 (y) 上拖拽。可能的值："x", "y"。
-        containment: "document",//约束在指定元素或区域的边界内拖拽
+        containment: "parent",//约束在指定元素或区域的边界内拖拽
 
         handle: false,//指定可拖拽元素的子元素被拖拽时，该拖拽元素才可以被拖动
         cancel: "input, textarea, button, select, option",//防止从指定的元素上开始拖拽。
@@ -32,7 +32,8 @@ $(function() {
 
         iframeFix: false,//???
         opacity: false,//当被拖拽时助手（helper）的透明度
-        refreshPositions: false,//如果设置为 true，在每次鼠标移动（mousemove）时都会计算所有可放置的位置。注意：这解决了高度动态的问题，但是明显降低了性能??
+        refreshPositions: false,//如果设置为 true，在每次鼠标移动（mousemove）时都会计算所有可放置的位置。
+        //注意：这解决了高度动态的问题，但是明显降低了性能??
         
         revert: false,//当拖拽停止时，元素是否还原到它的开始位置，返回 draggable（或它的助手）到原始位置
         revertDuration: 500,//还原（revert）动画的持续时间，以毫秒计。如果 revert 选项是 false 则忽略。
