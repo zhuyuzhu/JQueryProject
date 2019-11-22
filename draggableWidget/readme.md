@@ -1,4 +1,5 @@
 属性值为默认值
+
 (1)addClasses: false
 添加ui-draggable的css类，可以通过该类给标签设置样式，但是在测试时，值为true和false时，
 original和helper都添加了ui-draggable
@@ -78,9 +79,7 @@ original和helper都添加了ui-draggable
 值：original：是源元素，拖拽时，将拖拽源标签作为helper，随着光标移动
 值：clone：克隆源标签，克隆的标签随着光标移动
 值：还可以是一个function：返回值是一个标签元素dom等的 DOMElement
-helper: function(){
-            return '<div style="width:200px;height:50px;background-color:red;"></div>';
-        }
+helper: function(){return '<div style="width:200px;height:50px;background-color:red;"></div>';}
 
 (23)connectToSortable: false
 允许 draggable 放置在指定的 sortable 上。
